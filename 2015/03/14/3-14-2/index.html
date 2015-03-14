@@ -8,7 +8,7 @@
   <meta name="description" content="题意
 给定n维球上n+1个点的坐标，求球心坐标（保证有解）
 题解
-第一次写高斯消元，历经坎坷终于解决了。已知球上点坐标$(x_1,x_2…x_n)$，球心坐标为$(a_1,a_2…a_n)$,那就有：$(x_1-a_1)^2+…+(x_n-a_n)^2=x_1^2-2x_1a_1+a_1^2+…+x_n^2-2x_na_n+a_n^2=r^2$我们可以写出n+1个这样的式子，将上下两个式子相减得：">
+第一次写高斯消元，历经坎坷终于解决了。已知球上点坐标(x_1,x_2…x_n)，球心坐标为(a_1,a_2…a_n),那就有：$$(x_1-a_1)^2+…+(x_n-a_n)^2=x_1^2-2x_1a_1+a_1^2+…+x_n^2-2x_na_n+a_n^2=r^2$$我们可以写出n+1个这样的式子，将上下两个式子相减得：$$">
 <meta property="og:type" content="article">
 <meta property="og:title" content="BZOJ 1013 sphere">
 <meta property="og:url" content="http://fishclover.github.io/2015/03/14/3-14-2/">
@@ -16,14 +16,14 @@
 <meta property="og:description" content="题意
 给定n维球上n+1个点的坐标，求球心坐标（保证有解）
 题解
-第一次写高斯消元，历经坎坷终于解决了。已知球上点坐标$(x_1,x_2…x_n)$，球心坐标为$(a_1,a_2…a_n)$,那就有：$(x_1-a_1)^2+…+(x_n-a_n)^2=x_1^2-2x_1a_1+a_1^2+…+x_n^2-2x_na_n+a_n^2=r^2$我们可以写出n+1个这样的式子，将上下两个式子相减得：">
+第一次写高斯消元，历经坎坷终于解决了。已知球上点坐标(x_1,x_2…x_n)，球心坐标为(a_1,a_2…a_n),那就有：$$(x_1-a_1)^2+…+(x_n-a_n)^2=x_1^2-2x_1a_1+a_1^2+…+x_n^2-2x_na_n+a_n^2=r^2$$我们可以写出n+1个这样的式子，将上下两个式子相减得：$$">
 <meta property="og:image" content="http://i3.tietuku.com/d08699dec8e5f5d3.jpg">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BZOJ 1013 sphere">
 <meta name="twitter:description" content="题意
 给定n维球上n+1个点的坐标，求球心坐标（保证有解）
 题解
-第一次写高斯消元，历经坎坷终于解决了。已知球上点坐标$(x_1,x_2…x_n)$，球心坐标为$(a_1,a_2…a_n)$,那就有：$(x_1-a_1)^2+…+(x_n-a_n)^2=x_1^2-2x_1a_1+a_1^2+…+x_n^2-2x_na_n+a_n^2=r^2$我们可以写出n+1个这样的式子，将上下两个式子相减得：">
+第一次写高斯消元，历经坎坷终于解决了。已知球上点坐标(x_1,x_2…x_n)，球心坐标为(a_1,a_2…a_n),那就有：$$(x_1-a_1)^2+…+(x_n-a_n)^2=x_1^2-2x_1a_1+a_1^2+…+x_n^2-2x_na_n+a_n^2=r^2$$我们可以写出n+1个这样的式子，将上下两个式子相减得：$$">
 
   
   
@@ -128,7 +128,7 @@
         <h2 id="题意">题意</h2>
 <p>给定n维球上n+1个点的坐标，求球心坐标（<em>保证有解</em>）</p>
 <h2 id="题解">题解</h2>
-<p>第一次写高斯消元，历经坎坷终于解决了。<br>已知球上点坐标$(x_1,x_2…x_n)$，球心坐标为$(a_1,a_2…a_n)$,那就有：<br>$(x_1-a_1)^2+…+(x_n-a_n)^2=x_1^2-2x_1a_1+a_1^2+…+x_n^2-2x_na_n+a_n^2=r^2$<br>我们可以写出n+1个这样的式子，将上下两个式子相减得：<br>$2(x_1-y_1)a_1+2(x_2-y_2)a_2+…=x_1^2-y_1^2+x_2^2-y_2^2+…$<br>左边为n个未知数的一次多项式，右边为常数，进行高斯消元</p>
+<p>第一次写高斯消元，历经坎坷终于解决了。<br>已知球上点坐标(x_1,x_2…x_n)，球心坐标为(a_1,a_2…a_n),那就有：<br>$$(x_1-a_1)^2+…+(x_n-a_n)^2=x_1^2-2x_1a_1+a_1^2+…+x_n^2-2x_na_n+a_n^2=r^2$$<br>我们可以写出n+1个这样的式子，将上下两个式子相减得：<br>$$2(x_1-y_1)a_1+2(x_2-y_2)a_2+…=x_1^2-y_1^2+x_2^2-y_2^2+…$$<br>左边为n个未知数的一次多项式，右边为常数，进行高斯消元</p>
 <h2 id="高斯消元">高斯消元</h2>
 <p>枚举每一个未知数的n个式子，找到第一个其系数大于0的把它与当前最上面的式子交换，并将其系数化为1（<em>等式两边同时除以原系数</em>）。其余<strong>所有</strong>等式皆与之相减，消掉当前所枚举的未知数。然后将枚举下一未知数，用下面的等式重复如上步骤。<br>最后每个等式右边的常数就是该未知数的答案（<em>因为系数是1</em>）。</p>
 <h2 id="代码">代码</h2>
@@ -138,7 +138,7 @@
 
       </div>
       <footer class="article-footer">
-        <a data-url="http://fishclover.github.io/2015/03/14/3-14-2/" data-id="3pio230gn2pk6gpi" class="article-share-link">分享到</a>
+        <a data-url="http://fishclover.github.io/2015/03/14/3-14-2/" data-id="zpgh8shxv8u1elvd" class="article-share-link">分享到</a>
         
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/心的开始/">心的开始</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/高斯消元/">高斯消元</a></li></ul>
