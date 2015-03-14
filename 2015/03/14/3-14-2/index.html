@@ -8,7 +8,7 @@
   <meta name="description" content="题意
 给定n维球上n+1个点的坐标，求球心坐标（保证有解）
 题解
-第一次写高斯消元，历经坎坷终于解决了。已知球上点坐标$(x_1,x_2…x_n)$，球心坐标为$(a_1,a_2…a_n)$,那就有$(x_1-a_1)^2+…+(x_n-a_n)^2=x_1^2-2x_1a_1+a_1^2+…+x_n^2-2x_na_n+a_n^2=r^2$">
+第一次写高斯消元，历经坎坷终于解决了。已知球上点坐标$(x_1,x_2…x_n)$，球心坐标为$(a_1,a_2…a_n)$,那就有：$(x_1-a_1)^2+…+(x_n-a_n)^2=x_1^2-2x_1a_1+a_1^2+…+x_n^2-2x_na_n+a_n^2=r^2$我们可以写出n+1个这样的式子，将上下两个式子相减得：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="BZOJ 1013 sphere">
 <meta property="og:url" content="http://fishclover.github.io/2015/03/14/3-14-2/">
@@ -16,13 +16,14 @@
 <meta property="og:description" content="题意
 给定n维球上n+1个点的坐标，求球心坐标（保证有解）
 题解
-第一次写高斯消元，历经坎坷终于解决了。已知球上点坐标$(x_1,x_2…x_n)$，球心坐标为$(a_1,a_2…a_n)$,那就有$(x_1-a_1)^2+…+(x_n-a_n)^2=x_1^2-2x_1a_1+a_1^2+…+x_n^2-2x_na_n+a_n^2=r^2$">
+第一次写高斯消元，历经坎坷终于解决了。已知球上点坐标$(x_1,x_2…x_n)$，球心坐标为$(a_1,a_2…a_n)$,那就有：$(x_1-a_1)^2+…+(x_n-a_n)^2=x_1^2-2x_1a_1+a_1^2+…+x_n^2-2x_na_n+a_n^2=r^2$我们可以写出n+1个这样的式子，将上下两个式子相减得：">
+<meta property="og:image" content="http://i3.tietuku.com/d08699dec8e5f5d3.jpg">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BZOJ 1013 sphere">
 <meta name="twitter:description" content="题意
 给定n维球上n+1个点的坐标，求球心坐标（保证有解）
 题解
-第一次写高斯消元，历经坎坷终于解决了。已知球上点坐标$(x_1,x_2…x_n)$，球心坐标为$(a_1,a_2…a_n)$,那就有$(x_1-a_1)^2+…+(x_n-a_n)^2=x_1^2-2x_1a_1+a_1^2+…+x_n^2-2x_na_n+a_n^2=r^2$">
+第一次写高斯消元，历经坎坷终于解决了。已知球上点坐标$(x_1,x_2…x_n)$，球心坐标为$(a_1,a_2…a_n)$,那就有：$(x_1-a_1)^2+…+(x_n-a_n)^2=x_1^2-2x_1a_1+a_1^2+…+x_n^2-2x_na_n+a_n^2=r^2$我们可以写出n+1个这样的式子，将上下两个式子相减得：">
 
   
   
@@ -127,11 +128,17 @@
         <h2 id="题意">题意</h2>
 <p>给定n维球上n+1个点的坐标，求球心坐标（<em>保证有解</em>）</p>
 <h2 id="题解">题解</h2>
-<p>第一次写高斯消元，历经坎坷终于解决了。<br>已知球上点坐标$(x_1,x_2…x_n)$，球心坐标为$(a_1,a_2…a_n)$,那就有$(x_1-a_1)^2+…+(x_n-a_n)^2=x_1^2-2x_1a_1+a_1^2+…+x_n^2-2x_na_n+a_n^2=r^2$</p>
+<p>第一次写高斯消元，历经坎坷终于解决了。<br>已知球上点坐标$(x_1,x_2…x_n)$，球心坐标为$(a_1,a_2…a_n)$,那就有：<br>$(x_1-a_1)^2+…+(x_n-a_n)^2=x_1^2-2x_1a_1+a_1^2+…+x_n^2-2x_na_n+a_n^2=r^2$<br>我们可以写出n+1个这样的式子，将上下两个式子相减得：<br>$2(x_1-y_1)a_1+2(x_2-y_2)a_2+…=x_1^2-y_1^2+x_2^2-y_2^2+…$<br>左边为n个未知数的一次多项式，右边为常数，进行高斯消元</p>
+<h2 id="高斯消元">高斯消元</h2>
+<p>枚举每一个未知数的n个式子，找到第一个其系数大于0的把它与当前最上面的式子交换，并将其系数化为1（<em>等式两边同时除以原系数</em>）。其余<strong>所有</strong>等式皆与之相减，消掉当前所枚举的未知数。然后将枚举下一未知数，用下面的等式重复如上步骤。<br>最后每个等式右边的常数就是该未知数的答案（<em>因为系数是1</em>）。</p>
+<h2 id="代码">代码</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;cstdio&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;iostream&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;cmath&gt;</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="preprocessor">#<span class="keyword">define</span> eps 1e-6</span></div><div class="line"><span class="keyword">double</span> f[<span class="number">30</span>],a[<span class="number">30</span>][<span class="number">30</span>],x;</div><div class="line"><span class="keyword">int</span> main()</div><div class="line">{</div><div class="line">	<span class="keyword">int</span> n,j,now=<span class="number">1</span>;</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&n);</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="built_in">scanf</span>(<span class="string">"%lf"</span>,&f[i]);</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n;j++)</div><div class="line">	{</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%lf"</span>,&x);</div><div class="line">		a[i][j]=<span class="number">2</span>*(x-f[j]);</div><div class="line">		a[i][n+<span class="number">1</span>]+=x*x-f[j]*f[j];</div><div class="line">	}</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">	{</div><div class="line">		<span class="keyword">for</span> (j=now;j&lt;=n;j++) <span class="keyword">if</span> (<span class="built_in">fabs</span>(a[j][i])&gt;eps) <span class="keyword">break</span>;</div><div class="line">		<span class="keyword">if</span> (j&gt;n) <span class="keyword">continue</span>;</div><div class="line">		<span class="keyword">if</span> (j!=now)	<span class="keyword">for</span> (<span class="keyword">int</span> k=<span class="number">1</span>;k&lt;=n+<span class="number">1</span>;k++) swap(a[j][k],a[now][k]);</div><div class="line">		x=a[now][i];</div><div class="line">		<span class="keyword">for</span> (j=<span class="number">1</span>;j&lt;=n+<span class="number">1</span>;j++) a[now][j]/=x;</div><div class="line">		</div><div class="line">		<span class="keyword">for</span> (j=<span class="number">1</span>;j&lt;=n;j++)</div><div class="line">		<span class="keyword">if</span> (j!=now)</div><div class="line">		{</div><div class="line">			x=a[j][i];</div><div class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> k=<span class="number">1</span>;k&lt;=n+<span class="number">1</span>;k++) a[j][k]-=x*a[now][k];</div><div class="line">		}</div><div class="line">		now++;</div><div class="line">	}</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;n;i++)</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%.3lf "</span>,a[i][n+<span class="number">1</span>]);<span class="built_in">printf</span>(<span class="string">"%.3lf\n"</span>,a[n][n+<span class="number">1</span>]);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
+
+<p><img src="http://i3.tietuku.com/d08699dec8e5f5d3.jpg" alt=""></p>
 
       </div>
       <footer class="article-footer">
-        <a data-url="http://fishclover.github.io/2015/03/14/3-14-2/" data-id="d6tgz3re84fb2tzc" class="article-share-link">分享到</a>
+        <a data-url="http://fishclover.github.io/2015/03/14/3-14-2/" data-id="3pio230gn2pk6gpi" class="article-share-link">分享到</a>
         
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/心的开始/">心的开始</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/高斯消元/">高斯消元</a></li></ul>
@@ -206,7 +213,8 @@
             <div class="item-thumbnail">
               <a href="/2015/03/14/3-14-2/" class="thumbnail">
   
-    <span class="thumbnail-image thumbnail-none"></span>
+    <span style="background-image:url(http://i3.tietuku.com/d08699dec8e5f5d3.jpg
+)" alt="BZOJ 1013 sphere" class="thumbnail-image"></span>
   
 
 </a>
