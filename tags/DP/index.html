@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: 杂感 | clover&#39;s</title>
+  <title>Tag: DP | clover&#39;s</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="幸福是灵魂的一种香味">
 <meta property="og:type" content="website">
 <meta property="og:title" content="clover's">
-<meta property="og:url" content="http://fishclover.github.io/tags/杂感/">
+<meta property="og:url" content="http://fishclover.github.io/tags/DP/">
 <meta property="og:site_name" content="clover's">
 <meta property="og:description" content="幸福是灵魂的一种香味">
 <meta name="twitter:card" content="summary">
@@ -91,7 +91,7 @@
           <section id="main">
             <div class="main-body-header">
 
-              <h1 class="header"><i class="icon" id="icon-tag"></i>标签：<em>杂感</em></h1>
+              <h1 class="header"><i class="icon" id="icon-tag"></i>标签：<em>DP</em></h1>
             </div>
             <div class="main-body-content">
               
@@ -100,24 +100,59 @@
         
   <article class="article article-summary">
     <div class="article-summary-inner">
-      <a href="/2015/03/13/第一章/" class="thumbnail">
+      <a href="/2015/03/15/3-15-2/" class="thumbnail">
   
-    <span style="background-image:url(http://ww2.sinaimg.cn/large/ad302a0djw1eq4frul6i4j211y0lcdjb.jpg
-)" alt="我的第一篇文章" class="thumbnail-image"></span>
+    <span style="background-image:url(http://i2.tietuku.com/8ab1958686d4fecc.jpg
+)" alt="BZOJ 1037 生日聚会" class="thumbnail-image"></span>
   
 
 </a>
       <div class="article-meta">
-        <p class="category"><a class="article-category-link" href="/categories/心情随笔/">心情随笔</a></p>
-        <p class="date"><time datetime="2015-03-13T08:27:46.000Z" itemprop="datePublished">3月 13 2015</time></p>
+        <p class="category"><a class="article-category-link" href="/categories/BZOJ/">BZOJ</a></p>
+        <p class="date"><time datetime="2015-03-15T08:58:07.000Z" itemprop="datePublished">3月 15 2015</time></p>
       </div>
       <h2 class="article-title">
-        <a href="/2015/03/13/第一章/" class="title">我的第一篇文章</a>
+        <a href="/2015/03/15/3-15-2/" class="title">BZOJ 1037 生日聚会</a>
       </h2>
       <p class="article-excerpt">
         
-        这是我第一次在hexo上写博客在接下来的时光中，我在与你认真交流我在这里在这里记录我的成长
+        题意
+n个男生m个女生排成一排，要求任意一段男生和女生人数差不超过k，求排列方案数。（假设所有男生都一样，所有女生都一样）答案取模。
+数据范围
+$$n,m\leqslant150\ \ \ ;\ \ \ k\leqslant20$$
+题解
+数据这么小，一想就是DP，但没想到是四维的……f[i][j][x][y]表示前i个人中有j个男生，且从后面起男生最多比女生多x个，女生最多比男生多y个。f[i+
+      </p>
+    </div>
+  </article>
 
+    
+  
+        
+  <article class="article article-summary">
+    <div class="article-summary-inner">
+      <a href="/2015/03/15/3-15-1/" class="thumbnail">
+  
+    <span style="background-image:url(http://i2.tietuku.com/a6e23f2005249120.jpg
+)" alt="BZOJ 1296 粉刷匠" class="thumbnail-image"></span>
+  
+
+</a>
+      <div class="article-meta">
+        <p class="category"><a class="article-category-link" href="/categories/BZOJ/">BZOJ</a></p>
+        <p class="date"><time datetime="2015-03-14T22:28:17.000Z" itemprop="datePublished">3月 15 2015</time></p>
+      </div>
+      <h2 class="article-title">
+        <a href="/2015/03/15/3-15-1/" class="title">BZOJ 1296 粉刷匠</a>
+      </h2>
+      <p class="article-excerpt">
+        
+        题意
+n条木板，每条木板上有m个格子，每个格子有目标颜色0或1。一次可以粉刷连续若干格，每格只能被粉刷一次。T次粉刷后最多有多少格子颜色正确。（初始无颜色）
+数据范围
+$$n,m\leqslant50\ \ \ ;\ \ \ T\leqslant2500$$
+题解
+泛化背包很久以前就讲过，但一直没有练过，今天是第一次。按照泛化背包的理解，每次先DP一行的状态，求出每一行粉刷i次的答案，再DP所有行
       </p>
     </div>
   </article>
