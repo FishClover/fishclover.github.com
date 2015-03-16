@@ -100,6 +100,146 @@
         
   <article class="article article-summary">
     <div class="article-summary-inner">
+      <a href="/2015/03/16/3-16-4/" class="thumbnail">
+  
+    <span style="background-image:url(http://i2.tietuku.com/fece6168b4a88ea2.jpg
+)" alt="BZOJ 1053 反素数" class="thumbnail-image"></span>
+  
+
+</a>
+      <div class="article-meta">
+        <p class="category"><a class="article-category-link" href="/categories/BZOJ/">BZOJ</a></p>
+        <p class="date"><time datetime="2015-03-16T06:51:48.000Z" itemprop="datePublished">3月 16 2015</time></p>
+      </div>
+      <h2 class="article-title">
+        <a href="/2015/03/16/3-16-4/" class="title">BZOJ 1053 反素数</a>
+      </h2>
+      <p class="article-excerpt">
+        
+        题意
+用g(x)表示x的约数个数，定义：若x满足g(x)&amp;gt;g(i){i|0&amp;lt; i&amp;lt; x}，则x被称为反素数。求不超过n的最大反素数。
+数据范围
+$$1\leq n\leq2000000000$$
+题解
+首先明白：
+
+一个数约数个数=所有素因子的指数+1的乘积 
+
+然后可以通过计算得:一个2000000000以内的数字不会有超过12个素因子，并且小素因子多一定比大素因子多要优。那么
+      </p>
+    </div>
+  </article>
+
+    
+  
+        
+  <article class="article article-summary">
+    <div class="article-summary-inner">
+      <a href="/2015/03/16/3-16-3/" class="thumbnail">
+  
+    <span style="background-image:url(http://i2.tietuku.com/24a70139892e9e7a.jpg
+)" alt="BZOJ 1006 神奇的国度" class="thumbnail-image"></span>
+  
+
+</a>
+      <div class="article-meta">
+        <p class="category"><a class="article-category-link" href="/categories/BZOJ/">BZOJ</a></p>
+        <p class="date"><time datetime="2015-03-16T06:33:02.000Z" itemprop="datePublished">3月 16 2015</time></p>
+      </div>
+      <h2 class="article-title">
+        <a href="/2015/03/16/3-16-3/" class="title">BZOJ 1006 神奇的国度</a>
+      </h2>
+      <p class="article-excerpt">
+        
+        题意
+保证大于3人的朋友关系一定会出现弦边（即连接环上不相邻的两个点）。在分组时要求朋友关系的两人不能分在同一组，求最少分几组。
+数据范围
+$$人数n\leq10000\ \ \ ;\ \ \ 朋友对数m\leq1000000$$
+题解
+环上有弦被称为弦图，那这道题就是在弦图上做最小染色（即相邻的点不能染同一种颜色），需要用到完美消除序列的最大势算法(MCS)。最大势算法是排序时每次找势能最大的点
+      </p>
+    </div>
+  </article>
+
+    
+      </div>
+    
+  
+      <div class="article-row">
+    
+        
+  <article class="article article-summary">
+    <div class="article-summary-inner">
+      <a href="/2015/03/16/3-16-2/" class="thumbnail">
+  
+    <span style="background-image:url(http://i2.tietuku.com/d7dd71e39b1ff29e.jpg
+)" alt="BZOJ 1854 游戏" class="thumbnail-image"></span>
+  
+
+</a>
+      <div class="article-meta">
+        <p class="category"><a class="article-category-link" href="/categories/BZOJ/">BZOJ</a></p>
+        <p class="date"><time datetime="2015-03-16T04:07:16.000Z" itemprop="datePublished">3月 16 2015</time></p>
+      </div>
+      <h2 class="article-title">
+        <a href="/2015/03/16/3-16-2/" class="title">BZOJ 1854 游戏</a>
+      </h2>
+      <p class="article-excerpt">
+        
+        题意
+一个武器有两种属性，属性由一个[1…10000]之间的整数表示。现从属性1 向上依次递增，共n武器，每个武器只能有一次，求最多能到多少属性。
+数据范围
+$$n\leq1000000$$
+题解
+
+做法一将武器和属性都看成点，并从属性向对应武器连边，这样就构成二分图，跑匈牙利。直到某一属性无法找到路径就跳出。但由于匈牙利算法复杂度是n^3，所以无法得满分。
+做法二满分算法是并查集。将武器看成边，
+      </p>
+    </div>
+  </article>
+
+    
+  
+        
+  <article class="article article-summary">
+    <div class="article-summary-inner">
+      <a href="/2015/03/16/3-16-1/" class="thumbnail">
+  
+    <span style="background-image:url(http://i3.tietuku.com/0666148385228c4e.jpg
+)" alt="BZOJ 1024 生日快乐" class="thumbnail-image"></span>
+  
+
+</a>
+      <div class="article-meta">
+        <p class="category"><a class="article-category-link" href="/categories/BZOJ/">BZOJ</a></p>
+        <p class="date"><time datetime="2015-03-16T04:00:56.000Z" itemprop="datePublished">3月 16 2015</time></p>
+      </div>
+      <h2 class="article-title">
+        <a href="/2015/03/16/3-16-1/" class="title">BZOJ 1024 生日快乐</a>
+      </h2>
+      <p class="article-excerpt">
+        
+        题意
+将X*Y的矩形蛋糕平均切成n份，每次只能平行于蛋糕一边切，求蛋糕的长边比短边的最大值最小是多少。
+数据范围
+$$1\leq X,Y\leq10000\ \ \ ;\ \ \ n\leq10$$
+题解
+暴搜，枚举切点，假设平行于长切一刀，使整块蛋糕分成i人份和n-i人份，那么切点一定是 X/n*i，因为每人分得蛋糕面积为(X*Y)/n，i人份要求总面积为(X*Y)/n*i。
+代码
+123456
+      </p>
+    </div>
+  </article>
+
+    
+      </div>
+    
+  
+      <div class="article-row">
+    
+        
+  <article class="article article-summary">
+    <div class="article-summary-inner">
       <a href="/2015/03/15/3-15-2/" class="thumbnail">
   
     <span style="background-image:url(http://i2.tietuku.com/8ab1958686d4fecc.jpg
@@ -325,6 +465,74 @@ $$n\leqslant10$$
         
           <li>
             <div class="item-thumbnail">
+              <a href="/2015/03/16/3-16-4/" class="thumbnail">
+  
+    <span style="background-image:url(http://i2.tietuku.com/fece6168b4a88ea2.jpg
+)" alt="BZOJ 1053 反素数" class="thumbnail-image"></span>
+  
+
+</a>
+            </div>
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/BZOJ/">BZOJ</a></p>
+              <p class="item-title"><a href="/2015/03/16/3-16-4/" class="title">BZOJ 1053 反素数</a></p>
+              <p class="item-date"><time datetime="2015-03-16T06:51:48.000Z" itemprop="datePublished">3月 16 2015</time></p>
+            </div>
+          </li>
+        
+          <li>
+            <div class="item-thumbnail">
+              <a href="/2015/03/16/3-16-3/" class="thumbnail">
+  
+    <span style="background-image:url(http://i2.tietuku.com/24a70139892e9e7a.jpg
+)" alt="BZOJ 1006 神奇的国度" class="thumbnail-image"></span>
+  
+
+</a>
+            </div>
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/BZOJ/">BZOJ</a></p>
+              <p class="item-title"><a href="/2015/03/16/3-16-3/" class="title">BZOJ 1006 神奇的国度</a></p>
+              <p class="item-date"><time datetime="2015-03-16T06:33:02.000Z" itemprop="datePublished">3月 16 2015</time></p>
+            </div>
+          </li>
+        
+          <li>
+            <div class="item-thumbnail">
+              <a href="/2015/03/16/3-16-2/" class="thumbnail">
+  
+    <span style="background-image:url(http://i2.tietuku.com/d7dd71e39b1ff29e.jpg
+)" alt="BZOJ 1854 游戏" class="thumbnail-image"></span>
+  
+
+</a>
+            </div>
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/BZOJ/">BZOJ</a></p>
+              <p class="item-title"><a href="/2015/03/16/3-16-2/" class="title">BZOJ 1854 游戏</a></p>
+              <p class="item-date"><time datetime="2015-03-16T04:07:16.000Z" itemprop="datePublished">3月 16 2015</time></p>
+            </div>
+          </li>
+        
+          <li>
+            <div class="item-thumbnail">
+              <a href="/2015/03/16/3-16-1/" class="thumbnail">
+  
+    <span style="background-image:url(http://i3.tietuku.com/0666148385228c4e.jpg
+)" alt="BZOJ 1024 生日快乐" class="thumbnail-image"></span>
+  
+
+</a>
+            </div>
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/BZOJ/">BZOJ</a></p>
+              <p class="item-title"><a href="/2015/03/16/3-16-1/" class="title">BZOJ 1024 生日快乐</a></p>
+              <p class="item-date"><time datetime="2015-03-16T04:00:56.000Z" itemprop="datePublished">3月 16 2015</time></p>
+            </div>
+          </li>
+        
+          <li>
+            <div class="item-thumbnail">
               <a href="/2015/03/15/3-15-2/" class="thumbnail">
   
     <span style="background-image:url(http://i2.tietuku.com/8ab1958686d4fecc.jpg
@@ -340,74 +548,6 @@ $$n\leqslant10$$
             </div>
           </li>
         
-          <li>
-            <div class="item-thumbnail">
-              <a href="/2015/03/15/3-15-1/" class="thumbnail">
-  
-    <span style="background-image:url(http://i2.tietuku.com/a6e23f2005249120.jpg
-)" alt="BZOJ 1296 粉刷匠" class="thumbnail-image"></span>
-  
-
-</a>
-            </div>
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/BZOJ/">BZOJ</a></p>
-              <p class="item-title"><a href="/2015/03/15/3-15-1/" class="title">BZOJ 1296 粉刷匠</a></p>
-              <p class="item-date"><time datetime="2015-03-14T22:28:17.000Z" itemprop="datePublished">3月 15 2015</time></p>
-            </div>
-          </li>
-        
-          <li>
-            <div class="item-thumbnail">
-              <a href="/2015/03/14/3-14-3/" class="thumbnail">
-  
-    <span style="background-image:url(http://i2.tietuku.com/86c1af75b1dd80fc.jpg
-)" alt="BZOJ 3505 数三角形" class="thumbnail-image"></span>
-  
-
-</a>
-            </div>
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/BZOJ/">BZOJ</a></p>
-              <p class="item-title"><a href="/2015/03/14/3-14-3/" class="title">BZOJ 3505 数三角形</a></p>
-              <p class="item-date"><time datetime="2015-03-14T11:18:12.000Z" itemprop="datePublished">3月 14 2015</time></p>
-            </div>
-          </li>
-        
-          <li>
-            <div class="item-thumbnail">
-              <a href="/2015/03/14/3-14-2/" class="thumbnail">
-  
-    <span style="background-image:url(http://i3.tietuku.com/d08699dec8e5f5d3.jpg
-)" alt="BZOJ 1013 球形空间产生器" class="thumbnail-image"></span>
-  
-
-</a>
-            </div>
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/BZOJ/">BZOJ</a></p>
-              <p class="item-title"><a href="/2015/03/14/3-14-2/" class="title">BZOJ 1013 球形空间产生器</a></p>
-              <p class="item-date"><time datetime="2015-03-14T07:28:41.000Z" itemprop="datePublished">3月 14 2015</time></p>
-            </div>
-          </li>
-        
-          <li>
-            <div class="item-thumbnail">
-              <a href="/2015/03/14/3-14-1/" class="thumbnail">
-  
-    <span style="background-image:url(http://ww4.sinaimg.cn/large/ad302a0djw1eq4zg5xbozj211y0lcafm.jpg
-)" alt="集训的开始" class="thumbnail-image"></span>
-  
-
-</a>
-            </div>
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/心情随笔/">心情随笔</a></p>
-              <p class="item-title"><a href="/2015/03/14/3-14-1/" class="title">集训的开始</a></p>
-              <p class="item-date"><time datetime="2015-03-14T01:07:04.000Z" itemprop="datePublished">3月 14 2015</time></p>
-            </div>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -417,7 +557,7 @@ $$n\leqslant10$$
   <div class="widget-wrap widget-list">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/BZOJ/">BZOJ</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/心情随笔/">心情随笔</a><span class="category-list-count">2</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/BZOJ/">BZOJ</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/心情随笔/">心情随笔</a><span class="category-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -427,7 +567,7 @@ $$n\leqslant10$$
   <div class="widget-wrap widget-list">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">6</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">10</span></li></ul>
     </div>
   </div>
 
@@ -437,7 +577,7 @@ $$n\leqslant10$$
   <div class="widget-wrap widget-list">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/DP/">DP</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/心的开始/">心的开始</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂感/">杂感</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/泛化背包/">泛化背包</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/组合/">组合</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/高斯消元/">高斯消元</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/DP/">DP</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/并查集/">并查集</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/心的开始/">心的开始</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/搜索/">搜索</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/最小染色/">最小染色</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂感/">杂感</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/泛化背包/">泛化背包</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/组合/">组合</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/高斯消元/">高斯消元</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -447,7 +587,7 @@ $$n\leqslant10$$
   <div class="widget-wrap widget-float">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/DP/" style="font-size: 15.00px;">DP</a><a href="/tags/心的开始/" style="font-size: 20.00px;">心的开始</a><a href="/tags/杂感/" style="font-size: 10.00px;">杂感</a><a href="/tags/泛化背包/" style="font-size: 10.00px;">泛化背包</a><a href="/tags/组合/" style="font-size: 10.00px;">组合</a><a href="/tags/高斯消元/" style="font-size: 10.00px;">高斯消元</a>
+      <a href="/tags/DP/" style="font-size: 15.00px;">DP</a><a href="/tags/并查集/" style="font-size: 10.00px;">并查集</a><a href="/tags/心的开始/" style="font-size: 20.00px;">心的开始</a><a href="/tags/搜索/" style="font-size: 15.00px;">搜索</a><a href="/tags/最小染色/" style="font-size: 10.00px;">最小染色</a><a href="/tags/杂感/" style="font-size: 10.00px;">杂感</a><a href="/tags/泛化背包/" style="font-size: 10.00px;">泛化背包</a><a href="/tags/组合/" style="font-size: 10.00px;">组合</a><a href="/tags/高斯消元/" style="font-size: 10.00px;">高斯消元</a>
     </div>
   </div>
 

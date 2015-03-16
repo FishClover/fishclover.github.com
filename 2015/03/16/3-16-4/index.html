@@ -3,17 +3,45 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: 组合 | clover&#39;s</title>
+  <title>BZOJ 1053 反素数 | clover&#39;s</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="幸福是灵魂的一种香味">
-<meta property="og:type" content="website">
-<meta property="og:title" content="clover's">
-<meta property="og:url" content="http://fishclover.github.io/tags/组合/">
+  <meta name="description" content="题意
+用g(x)表示x的约数个数，定义：若x满足g(x)&gt;g(i){i|0&lt; i&lt; x}，则x被称为反素数。求不超过n的最大反素数。
+数据范围
+$$1\leq n\leq2000000000$$
+题解
+首先明白：
+
+一个数约数个数=所有素因子的指数+1的乘积 
+
+然后可以通过计算得:一个2000000000以内的数字不会有超过12个素因子，并且小素因子多一定比大素因子多要优。那么">
+<meta property="og:type" content="article">
+<meta property="og:title" content="BZOJ 1053 反素数">
+<meta property="og:url" content="http://fishclover.github.io/2015/03/16/3-16-4/">
 <meta property="og:site_name" content="clover's">
-<meta property="og:description" content="幸福是灵魂的一种香味">
+<meta property="og:description" content="题意
+用g(x)表示x的约数个数，定义：若x满足g(x)&gt;g(i){i|0&lt; i&lt; x}，则x被称为反素数。求不超过n的最大反素数。
+数据范围
+$$1\leq n\leq2000000000$$
+题解
+首先明白：
+
+一个数约数个数=所有素因子的指数+1的乘积 
+
+然后可以通过计算得:一个2000000000以内的数字不会有超过12个素因子，并且小素因子多一定比大素因子多要优。那么">
+<meta property="og:image" content="http://i2.tietuku.com/fece6168b4a88ea2.jpg">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="clover's">
-<meta name="twitter:description" content="幸福是灵魂的一种香味">
+<meta name="twitter:title" content="BZOJ 1053 反素数">
+<meta name="twitter:description" content="题意
+用g(x)表示x的约数个数，定义：若x满足g(x)&gt;g(i){i|0&lt; i&lt; x}，则x被称为反素数。求不超过n的最大反素数。
+数据范围
+$$1\leq n\leq2000000000$$
+题解
+首先明白：
+
+一个数约数个数=所有素因子的指数+1的乘积 
+
+然后可以通过计算得:一个2000000000以内的数字不会有超过12个素因子，并且小素因子多一定比大素因子多要优。那么">
 
   
   
@@ -91,51 +119,75 @@
           <section id="main">
             <div class="main-body-header">
 
-              <h1 class="header"><i class="icon" id="icon-tag"></i>标签：<em>组合</em></h1>
+              <h1 class="header"><a class="page-title-link" href="/categories/BZOJ/">BZOJ</a></h1>
             </div>
             <div class="main-body-content">
               
-      <div class="article-row">
-    
-        
-  <article class="article article-summary">
-    <div class="article-summary-inner">
-      <a href="/2015/03/14/3-14-3/" class="thumbnail">
+  <article id="post-3-16-4" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+      <!--  -->
+      
+        <header class="article-header">
+          
   
-    <span style="background-image:url(http://i2.tietuku.com/86c1af75b1dd80fc.jpg
-)" alt="BZOJ 3505 数三角形" class="thumbnail-image"></span>
+    <h1 class="article-title" itemprop="name">
+      BZOJ 1053 反素数
+    </h1>
   
 
+        </header>
+      
+      <p class="article-byline">
+        <a href="/2015/03/16/3-16-4/" class="article-date">
+  <time datetime="2015-03-16T06:51:48.000Z" itemprop="datePublished">3月 16 2015</time>
 </a>
-      <div class="article-meta">
-        <p class="category"><a class="article-category-link" href="/categories/BZOJ/">BZOJ</a></p>
-        <p class="date"><time datetime="2015-03-14T11:18:12.000Z" itemprop="datePublished">3月 14 2015</time></p>
-      </div>
-      <h2 class="article-title">
-        <a href="/2015/03/14/3-14-3/" class="title">BZOJ 3505 数三角形</a>
-      </h2>
-      <p class="article-excerpt">
-        
-        
-题意
-在n*m的网格中有多少个顶点在网格上的三角形
-数据范围
-$$n,m\leqslant1,000$$
-题解
-n*m个点中任选三个有C(n+m,3)种选择，在同一行的或同一列的直接算组合数减。对于斜线上的点，有如下做法：
-
-(x,y)和(a,b)所成线段中的点数共有gcd(x-a,y-b)+1个（包括两端）。
-现在把端点坐标减去(a,b)，就成了(x,y)与(0,0)所成线段，那么长度相同的线
       </p>
+      <div class="article-entry" itemprop="articleBody">
+        <h2 id="题意">题意</h2>
+<p>用g(x)表示x的约数个数，定义：若x满足g(x)&gt;g(i){i|0&lt; i&lt; x}，则x被称为反素数。求不超过n的最大反素数。</p>
+<h2 id="数据范围">数据范围</h2>
+<p>$$1\leq n\leq2000000000$$</p>
+<h2 id="题解">题解</h2>
+<p>首先明白：</p>
+<blockquote>
+<p>一个数约数个数=所有素因子的指数+1的乘积 </p>
+</blockquote>
+<p>然后可以通过计算得:一个2000000000以内的数字不会有超过12个素因子，并且小素因子多一定比大素因子多要优。那么预处理出前12个素数，剩下的直接暴搜即可。</p>
+<h2 id="代码">代码</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;cstdio&gt;</span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> p[<span class="number">13</span>]={<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">11</span>,<span class="number">13</span>,<span class="number">17</span>,<span class="number">19</span>,<span class="number">23</span>,<span class="number">29</span>,<span class="number">31</span>};</div><div class="line"><span class="keyword">int</span> n,ans=<span class="number">1</span>,num=<span class="number">1</span>;</div><div class="line"><span class="keyword">void</span> dfs(<span class="keyword">int</span> k,<span class="keyword">long</span> <span class="keyword">long</span> now,<span class="keyword">int</span> cnt,<span class="keyword">int</span> last)</div><div class="line"><span class="comment">//当前素数因子，当前数，约数个数，上一个素数因子指数</span></div><div class="line">{</div><div class="line">	<span class="keyword">if</span> (k==<span class="number">12</span>)</div><div class="line">	{</div><div class="line">		<span class="keyword">if</span> ((now&gt;ans&&cnt&gt;num)||(now&lt;ans&&cnt&gt;=num))</div><div class="line">			{ans=now;num=cnt;}</div><div class="line">		<span class="keyword">return</span>;</div><div class="line">	}</div><div class="line">	<span class="keyword">int</span> t=<span class="number">1</span>;</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=last&&now*t&lt;=n;i++)</div><div class="line">	<span class="comment">//较大素数因子指数比较小的小，才能保证相同约数个数时当前数尽量小</span></div><div class="line">	{</div><div class="line">		dfs(k+<span class="number">1</span>,now*t,cnt*(i+<span class="number">1</span>),i);</div><div class="line">		t*=p[k];</div><div class="line">	}</div><div class="line">}</div><div class="line"><span class="keyword">int</span> main()</div><div class="line">{</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&n);</div><div class="line">	dfs(<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">20</span>);</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,ans);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
+
+<p><img src="http://i2.tietuku.com/fece6168b4a88ea2.jpg" alt=""></p>
+
+      </div>
+      <footer class="article-footer">
+        <a data-url="http://fishclover.github.io/2015/03/16/3-16-4/" data-id="wr7gbhd8o7fbptt0" class="article-share-link">分享到</a>
+        
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/搜索/">搜索</a></li></ul>
+
+      </footer>
     </div>
   </article>
-
-    
-      </div>
-    
   
+  <section id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="post-3-16-4" data-title="BZOJ 1053 反素数" data-url="http://fishclover.github.io/2015/03/16/3-16-4/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:'fishclover'};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+      </script>
+    <!-- 多说公共JS代码 end -->
+  </section>
   
-
 
             </div>
           </section>
@@ -157,6 +209,19 @@ n*m个点中任选三个有C(n+m,3)种选择，在同一行的或同一列的直
       
     </ul>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/03/16/3-16-3/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <p class="article-nav-title">BZOJ 1006 神奇的国度</p>
+      <i class="icon" id="icon-chevron-left"></i>
+    </a>
+  
+</nav>
+
   
   <div class="widgets-container">
     
