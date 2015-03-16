@@ -10,11 +10,7 @@
 数据范围
 $$1\leq n\leq2000000000$$
 题解
-首先明白：
-
-一个数约数个数=所有素因子的指数+1的乘积 
-
-然后可以通过计算得:一个2000000000以内的数字不会有超过12个素因子，并且小素因子多一定比大素因子多要优。那么">
+首先明白：一个数约数个数=所有素因子的指数+1的乘积 。然后可以通过计算得:一个2000000000以内的数字不会有超过12个素因子，并且小素因子多一定比大素因子多要优。那么预处理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="BZOJ 1053 反素数">
 <meta property="og:url" content="http://fishclover.github.io/2015/03/16/3-16-4/">
@@ -24,11 +20,7 @@ $$1\leq n\leq2000000000$$
 数据范围
 $$1\leq n\leq2000000000$$
 题解
-首先明白：
-
-一个数约数个数=所有素因子的指数+1的乘积 
-
-然后可以通过计算得:一个2000000000以内的数字不会有超过12个素因子，并且小素因子多一定比大素因子多要优。那么">
+首先明白：一个数约数个数=所有素因子的指数+1的乘积 。然后可以通过计算得:一个2000000000以内的数字不会有超过12个素因子，并且小素因子多一定比大素因子多要优。那么预处理">
 <meta property="og:image" content="http://i2.tietuku.com/fece6168b4a88ea2.jpg">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BZOJ 1053 反素数">
@@ -37,11 +29,7 @@ $$1\leq n\leq2000000000$$
 数据范围
 $$1\leq n\leq2000000000$$
 题解
-首先明白：
-
-一个数约数个数=所有素因子的指数+1的乘积 
-
-然后可以通过计算得:一个2000000000以内的数字不会有超过12个素因子，并且小素因子多一定比大素因子多要优。那么">
+首先明白：一个数约数个数=所有素因子的指数+1的乘积 。然后可以通过计算得:一个2000000000以内的数字不会有超过12个素因子，并且小素因子多一定比大素因子多要优。那么预处理">
 
   
   
@@ -148,11 +136,7 @@ $$1\leq n\leq2000000000$$
 <h2 id="数据范围">数据范围</h2>
 <p>$$1\leq n\leq2000000000$$</p>
 <h2 id="题解">题解</h2>
-<p>首先明白：</p>
-<blockquote>
-<p>一个数约数个数=所有素因子的指数+1的乘积 </p>
-</blockquote>
-<p>然后可以通过计算得:一个2000000000以内的数字不会有超过12个素因子，并且小素因子多一定比大素因子多要优。那么预处理出前12个素数，剩下的直接暴搜即可。</p>
+<p>首先明白：一个数约数个数=所有素因子的指数+1的乘积 。<br>然后可以通过计算得:一个2000000000以内的数字不会有超过12个素因子，并且小素因子多一定比大素因子多要优。那么预处理出前12个素数，剩下的直接暴搜即可。</p>
 <h2 id="代码">代码</h2>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;cstdio&gt;</span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> p[<span class="number">13</span>]={<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">11</span>,<span class="number">13</span>,<span class="number">17</span>,<span class="number">19</span>,<span class="number">23</span>,<span class="number">29</span>,<span class="number">31</span>};</div><div class="line"><span class="keyword">int</span> n,ans=<span class="number">1</span>,num=<span class="number">1</span>;</div><div class="line"><span class="keyword">void</span> dfs(<span class="keyword">int</span> k,<span class="keyword">long</span> <span class="keyword">long</span> now,<span class="keyword">int</span> cnt,<span class="keyword">int</span> last)</div><div class="line"><span class="comment">//当前素数因子，当前数，约数个数，上一个素数因子指数</span></div><div class="line">{</div><div class="line">	<span class="keyword">if</span> (k==<span class="number">12</span>)</div><div class="line">	{</div><div class="line">		<span class="keyword">if</span> ((now&gt;ans&&cnt&gt;num)||(now&lt;ans&&cnt&gt;=num))</div><div class="line">			{ans=now;num=cnt;}</div><div class="line">		<span class="keyword">return</span>;</div><div class="line">	}</div><div class="line">	<span class="keyword">int</span> t=<span class="number">1</span>;</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=last&&now*t&lt;=n;i++)</div><div class="line">	<span class="comment">//较大素数因子指数比较小的小，才能保证相同约数个数时当前数尽量小</span></div><div class="line">	{</div><div class="line">		dfs(k+<span class="number">1</span>,now*t,cnt*(i+<span class="number">1</span>),i);</div><div class="line">		t*=p[k];</div><div class="line">	}</div><div class="line">}</div><div class="line"><span class="keyword">int</span> main()</div><div class="line">{</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&n);</div><div class="line">	dfs(<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">20</span>);</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,ans);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
 
