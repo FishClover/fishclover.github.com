@@ -100,6 +100,38 @@
         
   <article class="article article-summary">
     <div class="article-summary-inner">
+      <a href="/2015/03/17/3-17-2/" class="thumbnail">
+  
+    <span style="background-image:url(http://i2.tietuku.com/651058d036ead3d0.jpg
+)" alt="BZOJ 1002 轮状病毒" class="thumbnail-image"></span>
+  
+
+</a>
+      <div class="article-meta">
+        <p class="category"><a class="article-category-link" href="/categories/BZOJ/">BZOJ</a></p>
+        <p class="date"><time datetime="2015-03-17T12:28:25.000Z" itemprop="datePublished">3月 17 2015</time></p>
+      </div>
+      <h2 class="article-title">
+        <a href="/2015/03/17/3-17-2/" class="title">BZOJ 1002 轮状病毒</a>
+      </h2>
+      <p class="article-excerpt">
+        
+        
+题意
+给定n(N&amp;lt;=100)，编程计算有多少个不同的n轮状病毒。
+题解
+基尔霍夫矩阵（什么鬼），f[i]=(f[i-1]*3-f[i-2]+2)；f[1]=1,f[2]=5。剩下的就是高精度了。
+代码
+12345678910111213141516171819202122232425262728293031323334353637383940414243#include&amp;lt;cstdio
+      </p>
+    </div>
+  </article>
+
+    
+  
+        
+  <article class="article article-summary">
+    <div class="article-summary-inner">
       <a href="/2015/03/17/3-17-1/" class="thumbnail">
   
     <span style="background-image:url(http://i3.tietuku.com/c7c7fbdb1a76ea97.jpg
@@ -131,7 +163,11 @@ $$n\leq50000$$题解
   </article>
 
     
+      </div>
+    
   
+      <div class="article-row">
+    
         
   <article class="article article-summary">
     <div class="article-summary-inner">
@@ -162,11 +198,7 @@ $$n\leq50000$$题解
   </article>
 
     
-      </div>
-    
   
-      <div class="article-row">
-    
         
   <article class="article article-summary">
     <div class="article-summary-inner">
@@ -197,7 +229,11 @@ $$n\leq50000$$题解
   </article>
 
     
+      </div>
+    
   
+      <div class="article-row">
+    
         
   <article class="article article-summary">
     <div class="article-summary-inner">
@@ -228,11 +264,7 @@ $$歌曲数n\leq50\ \ \ ;\ \ \ ci\leq max\ \ \ ;\ \ \ 初始值begin,max\leq1000
   </article>
 
     
-      </div>
-    
   
-      <div class="article-row">
-    
         
   <article class="article article-summary">
     <div class="article-summary-inner">
@@ -263,7 +295,11 @@ $$1\leq n\leq2000000000$$
   </article>
 
     
+      </div>
+    
   
+      <div class="article-row">
+    
         
   <article class="article article-summary">
     <div class="article-summary-inner">
@@ -294,11 +330,7 @@ $$人数n\leq10000\ \ \ ;\ \ \ 朋友对数m\leq1000000$$
   </article>
 
     
-      </div>
-    
   
-      <div class="article-row">
-    
         
   <article class="article article-summary">
     <div class="article-summary-inner">
@@ -331,7 +363,11 @@ $$n\leq1000000$$
   </article>
 
     
+      </div>
+    
   
+      <div class="article-row">
+    
         
   <article class="article article-summary">
     <div class="article-summary-inner">
@@ -364,11 +400,7 @@ $$1\leq X,Y\leq10000\ \ \ ;\ \ \ n\leq10$$
   </article>
 
     
-      </div>
-    
   
-      <div class="article-row">
-    
         
   <article class="article article-summary">
     <div class="article-summary-inner">
@@ -394,37 +426,6 @@ n个男生m个女生排成一排，要求任意一段男生和女生人数差不
 $$n,m\leqslant150\ \ \ ;\ \ \ k\leqslant20$$
 题解
 数据这么小，一想就是DP，但没想到是四维的……f[i][j][x][y]表示前i个人中有j个男生，且从后面起男生最多比女生多x个，女生最多比男生多y个。f[i+
-      </p>
-    </div>
-  </article>
-
-    
-  
-        
-  <article class="article article-summary">
-    <div class="article-summary-inner">
-      <a href="/2015/03/15/3-15-1/" class="thumbnail">
-  
-    <span style="background-image:url(http://i2.tietuku.com/a6e23f2005249120.jpg
-)" alt="BZOJ 1296 粉刷匠" class="thumbnail-image"></span>
-  
-
-</a>
-      <div class="article-meta">
-        <p class="category"><a class="article-category-link" href="/categories/BZOJ/">BZOJ</a></p>
-        <p class="date"><time datetime="2015-03-14T22:28:17.000Z" itemprop="datePublished">3月 15 2015</time></p>
-      </div>
-      <h2 class="article-title">
-        <a href="/2015/03/15/3-15-1/" class="title">BZOJ 1296 粉刷匠</a>
-      </h2>
-      <p class="article-excerpt">
-        
-        题意
-n条木板，每条木板上有m个格子，每个格子有目标颜色0或1。一次可以粉刷连续若干格，每格只能被粉刷一次。T次粉刷后最多有多少格子颜色正确。（初始无颜色）
-数据范围
-$$n,m\leqslant50\ \ \ ;\ \ \ T\leqslant2500$$
-题解
-泛化背包很久以前就讲过，但一直没有练过，今天是第一次。按照泛化背包的理解，每次先DP一行的状态，求出每一行粉刷i次的答案，再DP所有行
       </p>
     </div>
   </article>
@@ -469,6 +470,23 @@ $$n,m\leqslant50\ \ \ ;\ \ \ T\leqslant2500$$
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul id="recent-post">
+        
+          <li>
+            <div class="item-thumbnail">
+              <a href="/2015/03/17/3-17-2/" class="thumbnail">
+  
+    <span style="background-image:url(http://i2.tietuku.com/651058d036ead3d0.jpg
+)" alt="BZOJ 1002 轮状病毒" class="thumbnail-image"></span>
+  
+
+</a>
+            </div>
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/BZOJ/">BZOJ</a></p>
+              <p class="item-title"><a href="/2015/03/17/3-17-2/" class="title">BZOJ 1002 轮状病毒</a></p>
+              <p class="item-date"><time datetime="2015-03-17T12:28:25.000Z" itemprop="datePublished">3月 17 2015</time></p>
+            </div>
+          </li>
         
           <li>
             <div class="item-thumbnail">
@@ -538,23 +556,6 @@ $$n,m\leqslant50\ \ \ ;\ \ \ T\leqslant2500$$
             </div>
           </li>
         
-          <li>
-            <div class="item-thumbnail">
-              <a href="/2015/03/16/3-16-4/" class="thumbnail">
-  
-    <span style="background-image:url(http://i2.tietuku.com/fece6168b4a88ea2.jpg
-)" alt="BZOJ 1053 反素数" class="thumbnail-image"></span>
-  
-
-</a>
-            </div>
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/BZOJ/">BZOJ</a></p>
-              <p class="item-title"><a href="/2015/03/16/3-16-4/" class="title">BZOJ 1053 反素数</a></p>
-              <p class="item-date"><time datetime="2015-03-16T06:51:48.000Z" itemprop="datePublished">3月 16 2015</time></p>
-            </div>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -564,7 +565,7 @@ $$n,m\leqslant50\ \ \ ;\ \ \ T\leqslant2500$$
   <div class="widget-wrap widget-list">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/BZOJ/">BZOJ</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/心情随笔/">心情随笔</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/BZOJ/">BZOJ</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/心情随笔/">心情随笔</a><span class="category-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -574,7 +575,7 @@ $$n,m\leqslant50\ \ \ ;\ \ \ T\leqslant2500$$
   <div class="widget-wrap widget-list">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">14</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">15</span></li></ul>
     </div>
   </div>
 
@@ -584,7 +585,7 @@ $$n,m\leqslant50\ \ \ ;\ \ \ T\leqslant2500$$
   <div class="widget-wrap widget-list">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/DP/">DP</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/并查集/">并查集</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/心的开始/">心的开始</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/搜索/">搜索</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/最小染色/">最小染色</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂感/">杂感</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/泛化背包/">泛化背包</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/组合/">组合</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算几何/">计算几何</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/高斯消元/">高斯消元</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/DP/">DP</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/并查集/">并查集</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/心的开始/">心的开始</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/搜索/">搜索</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/最小染色/">最小染色</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂感/">杂感</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/泛化背包/">泛化背包</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/组合/">组合</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算几何/">计算几何</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/高斯消元/">高斯消元</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/高精度/">高精度</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -594,7 +595,7 @@ $$n,m\leqslant50\ \ \ ;\ \ \ T\leqslant2500$$
   <div class="widget-wrap widget-float">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/DP/" style="font-size: 15.00px;">DP</a><a href="/tags/并查集/" style="font-size: 10.00px;">并查集</a><a href="/tags/心的开始/" style="font-size: 20.00px;">心的开始</a><a href="/tags/搜索/" style="font-size: 15.00px;">搜索</a><a href="/tags/最小染色/" style="font-size: 10.00px;">最小染色</a><a href="/tags/杂感/" style="font-size: 15.00px;">杂感</a><a href="/tags/泛化背包/" style="font-size: 10.00px;">泛化背包</a><a href="/tags/组合/" style="font-size: 10.00px;">组合</a><a href="/tags/计算几何/" style="font-size: 10.00px;">计算几何</a><a href="/tags/高斯消元/" style="font-size: 10.00px;">高斯消元</a>
+      <a href="/tags/DP/" style="font-size: 15.00px;">DP</a><a href="/tags/并查集/" style="font-size: 10.00px;">并查集</a><a href="/tags/心的开始/" style="font-size: 20.00px;">心的开始</a><a href="/tags/搜索/" style="font-size: 15.00px;">搜索</a><a href="/tags/最小染色/" style="font-size: 10.00px;">最小染色</a><a href="/tags/杂感/" style="font-size: 15.00px;">杂感</a><a href="/tags/泛化背包/" style="font-size: 10.00px;">泛化背包</a><a href="/tags/组合/" style="font-size: 10.00px;">组合</a><a href="/tags/计算几何/" style="font-size: 10.00px;">计算几何</a><a href="/tags/高斯消元/" style="font-size: 10.00px;">高斯消元</a><a href="/tags/高精度/" style="font-size: 10.00px;">高精度</a>
     </div>
   </div>
 
