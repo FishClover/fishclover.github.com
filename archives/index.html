@@ -102,6 +102,41 @@
         
   <article class="article article-summary">
     <div class="article-summary-inner">
+      <a href="/2015/03/18/3-18-2/" class="thumbnail">
+  
+    <span style="background-image:url(http://i3.tietuku.com/95e04d08c21253ff.jpg
+)" alt="BZOJ 1010 玩具装箱" class="thumbnail-image"></span>
+  
+
+</a>
+      <div class="article-meta">
+        <p class="category"><a class="article-category-link" href="/categories/BZOJ/">BZOJ</a></p>
+        <p class="date"><time datetime="2015-03-18T08:46:11.000Z" itemprop="datePublished">3月 18 2015</time></p>
+      </div>
+      <h2 class="article-title">
+        <a href="/2015/03/18/3-18-2/" class="title">BZOJ 1010 玩具装箱</a>
+      </h2>
+      <p class="article-excerpt">
+        
+        
+题意
+有n件玩具，玩具长度为ci。连续的玩具可以装进同一容器里，玩具之间要留有1个单位的空间。容器制作费为(X-L)^2，其中X表示容器长度，L表示常量。求最小费用。
+数据范围
+$$n\leq50000\ \ \ ;\ \ \ L,C_i\leq10^7$$
+题解
+动规方程
+　　根据题目描述很容易列出动规方程：
+　　其中 $$s[i]=\sum_{k=1}^{i} c[k]；$$
+　　而X即为s
+      </p>
+    </div>
+  </article>
+
+    
+  
+        
+  <article class="article article-summary">
+    <div class="article-summary-inner">
       <a href="/2015/03/18/3-18-1/" class="thumbnail">
   
     <span style="background-image:url(http://i3.tietuku.com/8465dbe68c92698c.jpg
@@ -129,7 +164,11 @@ $$n\leq100\ \ \ ;\ \ \ m\leq20$$
   </article>
 
     
+      </div>
+    
   
+      <div class="article-row">
+    
         
   <article class="article article-summary">
     <div class="article-summary-inner">
@@ -161,11 +200,7 @@ $$n\leq100\ \ \ ;\ \ \ m\leq20$$
   </article>
 
     
-      </div>
-    
   
-      <div class="article-row">
-    
         
   <article class="article article-summary">
     <div class="article-summary-inner">
@@ -200,7 +235,11 @@ $$n\leq50000$$题解
   </article>
 
     
+      </div>
+    
   
+      <div class="article-row">
+    
         
   <article class="article article-summary">
     <div class="article-summary-inner">
@@ -231,11 +270,7 @@ $$n\leq50000$$题解
   </article>
 
     
-      </div>
-    
   
-      <div class="article-row">
-    
         
   <article class="article article-summary">
     <div class="article-summary-inner">
@@ -266,7 +301,11 @@ $$n\leq50000$$题解
   </article>
 
     
+      </div>
+    
   
+      <div class="article-row">
+    
         
   <article class="article article-summary">
     <div class="article-summary-inner">
@@ -297,11 +336,7 @@ $$歌曲数n\leq50\ \ \ ;\ \ \ ci\leq max\ \ \ ;\ \ \ 初始值begin,max\leq1000
   </article>
 
     
-      </div>
-    
   
-      <div class="article-row">
-    
         
   <article class="article article-summary">
     <div class="article-summary-inner">
@@ -332,7 +367,11 @@ $$1\leq n\leq2000000000$$
   </article>
 
     
+      </div>
+    
   
+      <div class="article-row">
+    
         
   <article class="article article-summary">
     <div class="article-summary-inner">
@@ -363,11 +402,7 @@ $$人数n\leq10000\ \ \ ;\ \ \ 朋友对数m\leq1000000$$
   </article>
 
     
-      </div>
-    
   
-      <div class="article-row">
-    
         
   <article class="article article-summary">
     <div class="article-summary-inner">
@@ -395,39 +430,6 @@ $$n\leq1000000$$
 
 做法一将武器和属性都看成点，并从属性向对应武器连边，这样就构成二分图，跑匈牙利。直到某一属性无法找到路径就跳出。但由于匈牙利算法复杂度是n^3，所以无法得满分。
 做法二满分算法是并查集。将武器看成边，
-      </p>
-    </div>
-  </article>
-
-    
-  
-        
-  <article class="article article-summary">
-    <div class="article-summary-inner">
-      <a href="/2015/03/16/3-16-1/" class="thumbnail">
-  
-    <span style="background-image:url(http://i3.tietuku.com/0666148385228c4e.jpg
-)" alt="BZOJ 1024 生日快乐" class="thumbnail-image"></span>
-  
-
-</a>
-      <div class="article-meta">
-        <p class="category"><a class="article-category-link" href="/categories/BZOJ/">BZOJ</a></p>
-        <p class="date"><time datetime="2015-03-16T04:00:56.000Z" itemprop="datePublished">3月 16 2015</time></p>
-      </div>
-      <h2 class="article-title">
-        <a href="/2015/03/16/3-16-1/" class="title">BZOJ 1024 生日快乐</a>
-      </h2>
-      <p class="article-excerpt">
-        
-        题意
-将X*Y的矩形蛋糕平均切成n份，每次只能平行于蛋糕一边切，求蛋糕的长边比短边的最大值最小是多少。
-数据范围
-$$1\leq X,Y\leq10000\ \ \ ;\ \ \ n\leq10$$
-题解
-暴搜，枚举切点，假设平行于长切一刀，使整块蛋糕分成i人份和n-i人份，那么切点一定是 X/n*i，因为每人分得蛋糕面积为(X*Y)/n，i人份要求总面积为(X*Y)/n*i。
-代码
-123456
       </p>
     </div>
   </article>
@@ -472,6 +474,23 @@ $$1\leq X,Y\leq10000\ \ \ ;\ \ \ n\leq10$$
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul id="recent-post">
+        
+          <li>
+            <div class="item-thumbnail">
+              <a href="/2015/03/18/3-18-2/" class="thumbnail">
+  
+    <span style="background-image:url(http://i3.tietuku.com/95e04d08c21253ff.jpg
+)" alt="BZOJ 1010 玩具装箱" class="thumbnail-image"></span>
+  
+
+</a>
+            </div>
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/BZOJ/">BZOJ</a></p>
+              <p class="item-title"><a href="/2015/03/18/3-18-2/" class="title">BZOJ 1010 玩具装箱</a></p>
+              <p class="item-date"><time datetime="2015-03-18T08:46:11.000Z" itemprop="datePublished">3月 18 2015</time></p>
+            </div>
+          </li>
         
           <li>
             <div class="item-thumbnail">
@@ -541,23 +560,6 @@ $$1\leq X,Y\leq10000\ \ \ ;\ \ \ n\leq10$$
             </div>
           </li>
         
-          <li>
-            <div class="item-thumbnail">
-              <a href="/2015/03/16/3-16-6/" class="thumbnail">
-  
-    <span style="background-image:url(http://i2.tietuku.com/884350e4287f7f2a.jpg
-)" alt="BZOJ 1054 移动玩具" class="thumbnail-image"></span>
-  
-
-</a>
-            </div>
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/BZOJ/">BZOJ</a></p>
-              <p class="item-title"><a href="/2015/03/16/3-16-6/" class="title">BZOJ 1054 移动玩具</a></p>
-              <p class="item-date"><time datetime="2015-03-16T09:14:41.000Z" itemprop="datePublished">3月 16 2015</time></p>
-            </div>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -567,7 +569,7 @@ $$1\leq X,Y\leq10000\ \ \ ;\ \ \ n\leq10$$
   <div class="widget-wrap widget-list">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/BZOJ/">BZOJ</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/心情随笔/">心情随笔</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/BZOJ/">BZOJ</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/心情随笔/">心情随笔</a><span class="category-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -577,7 +579,7 @@ $$1\leq X,Y\leq10000\ \ \ ;\ \ \ n\leq10$$
   <div class="widget-wrap widget-list">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">16</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">17</span></li></ul>
     </div>
   </div>
 
@@ -587,7 +589,7 @@ $$1\leq X,Y\leq10000\ \ \ ;\ \ \ n\leq10$$
   <div class="widget-wrap widget-list">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/DP/">DP</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/并查集/">并查集</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/心的开始/">心的开始</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/搜索/">搜索</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/最小染色/">最小染色</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/最短路/">最短路</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂感/">杂感</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/泛化背包/">泛化背包</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/组合/">组合</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算几何/">计算几何</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/高斯消元/">高斯消元</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/高精度/">高精度</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/DP/">DP</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/并查集/">并查集</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/心的开始/">心的开始</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/搜索/">搜索</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/斜率优化/">斜率优化</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/最小染色/">最小染色</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/最短路/">最短路</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂感/">杂感</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/泛化背包/">泛化背包</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/组合/">组合</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算几何/">计算几何</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/高斯消元/">高斯消元</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/高精度/">高精度</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -597,7 +599,7 @@ $$1\leq X,Y\leq10000\ \ \ ;\ \ \ n\leq10$$
   <div class="widget-wrap widget-float">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/DP/" style="font-size: 16.67px;">DP</a><a href="/tags/并查集/" style="font-size: 10.00px;">并查集</a><a href="/tags/心的开始/" style="font-size: 20.00px;">心的开始</a><a href="/tags/搜索/" style="font-size: 13.33px;">搜索</a><a href="/tags/最小染色/" style="font-size: 10.00px;">最小染色</a><a href="/tags/最短路/" style="font-size: 10.00px;">最短路</a><a href="/tags/杂感/" style="font-size: 13.33px;">杂感</a><a href="/tags/泛化背包/" style="font-size: 10.00px;">泛化背包</a><a href="/tags/组合/" style="font-size: 10.00px;">组合</a><a href="/tags/计算几何/" style="font-size: 10.00px;">计算几何</a><a href="/tags/高斯消元/" style="font-size: 10.00px;">高斯消元</a><a href="/tags/高精度/" style="font-size: 10.00px;">高精度</a>
+      <a href="/tags/DP/" style="font-size: 16.67px;">DP</a><a href="/tags/并查集/" style="font-size: 10.00px;">并查集</a><a href="/tags/心的开始/" style="font-size: 20.00px;">心的开始</a><a href="/tags/搜索/" style="font-size: 13.33px;">搜索</a><a href="/tags/斜率优化/" style="font-size: 10.00px;">斜率优化</a><a href="/tags/最小染色/" style="font-size: 10.00px;">最小染色</a><a href="/tags/最短路/" style="font-size: 10.00px;">最短路</a><a href="/tags/杂感/" style="font-size: 13.33px;">杂感</a><a href="/tags/泛化背包/" style="font-size: 10.00px;">泛化背包</a><a href="/tags/组合/" style="font-size: 10.00px;">组合</a><a href="/tags/计算几何/" style="font-size: 10.00px;">计算几何</a><a href="/tags/高斯消元/" style="font-size: 10.00px;">高斯消元</a><a href="/tags/高精度/" style="font-size: 10.00px;">高精度</a>
     </div>
   </div>
 

@@ -3,43 +3,48 @@
 <head>
   <meta charset="utf-8">
   
-  <title>半平面交（三弹连发） | clover&#39;s</title>
+  <title>BZOJ 1010 玩具装箱 | clover&#39;s</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="半平面交基本概念
-
-半平面：由不等式ax+by+c&gt;=0确定。
-在一个有界区域里半平面或半平面的交是一个凸多边形区域。
-n个半平面的交是一个至多n条边的凸多边形。BZOJ 1007 水平可见直线
-题意
-平面直角坐标系上，有n条直线，从y为正无穷处往下看。问能看看到哪些直线？数据范围
-$$n\leq50000$$题解
-当一条直线不是最后半平面交的组成部分，仅当它被与它斜率相同的直线挡住，或被">
+  <meta name="description" content="题意
+有n件玩具，玩具长度为ci。连续的玩具可以装进同一容器里，玩具之间要留有1个单位的空间。容器制作费为(X-L)^2，其中X表示容器长度，L表示常量。求最小费用。
+数据范围
+$$n\leq50000\ \ \ ;\ \ \ L,C_i\leq10^7$$
+题解
+动规方程
+　　根据题目描述很容易列出动规方程：
+　　其中 $$s[i]=\sum_{k=1}^{i} c[k]；$$
+　　而X即为s">
 <meta property="og:type" content="article">
-<meta property="og:title" content="半平面交（三弹连发）">
-<meta property="og:url" content="http://fishclover.github.io/2015/03/17/3-17-1/">
+<meta property="og:title" content="BZOJ 1010 玩具装箱">
+<meta property="og:url" content="http://fishclover.github.io/2015/03/18/3-18-2/">
 <meta property="og:site_name" content="clover's">
-<meta property="og:description" content="半平面交基本概念
-
-半平面：由不等式ax+by+c&gt;=0确定。
-在一个有界区域里半平面或半平面的交是一个凸多边形区域。
-n个半平面的交是一个至多n条边的凸多边形。BZOJ 1007 水平可见直线
-题意
-平面直角坐标系上，有n条直线，从y为正无穷处往下看。问能看看到哪些直线？数据范围
-$$n\leq50000$$题解
-当一条直线不是最后半平面交的组成部分，仅当它被与它斜率相同的直线挡住，或被">
-<meta property="og:image" content="http://i3.tietuku.com/c7c7fbdb1a76ea97.jpg">
-<meta property="og:image" content="http://i2.tietuku.com/d6fdfd0aa5a2f18b.png">
+<meta property="og:description" content="题意
+有n件玩具，玩具长度为ci。连续的玩具可以装进同一容器里，玩具之间要留有1个单位的空间。容器制作费为(X-L)^2，其中X表示容器长度，L表示常量。求最小费用。
+数据范围
+$$n\leq50000\ \ \ ;\ \ \ L,C_i\leq10^7$$
+题解
+动规方程
+　　根据题目描述很容易列出动规方程：
+　　其中 $$s[i]=\sum_{k=1}^{i} c[k]；$$
+　　而X即为s">
+<meta property="og:image" content="http://i3.tietuku.com/95e04d08c21253ff.jpg">
+<meta property="og:image" content="http://i2.tietuku.com/809b516668e6615d.png">
+<meta property="og:image" content="http://i2.tietuku.com/85be1914dbec89aa.png">
+<meta property="og:image" content="http://i2.tietuku.com/701b3a9b7747ff4f.png">
+<meta property="og:image" content="http://i2.tietuku.com/d4cfafb3159fbf4f.png">
+<meta property="og:image" content="http://i2.tietuku.com/f455bd6c4a18db7a.png">
+<meta property="og:image" content="http://i2.tietuku.com/13e788e26489ea87.png">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="半平面交（三弹连发）">
-<meta name="twitter:description" content="半平面交基本概念
-
-半平面：由不等式ax+by+c&gt;=0确定。
-在一个有界区域里半平面或半平面的交是一个凸多边形区域。
-n个半平面的交是一个至多n条边的凸多边形。BZOJ 1007 水平可见直线
-题意
-平面直角坐标系上，有n条直线，从y为正无穷处往下看。问能看看到哪些直线？数据范围
-$$n\leq50000$$题解
-当一条直线不是最后半平面交的组成部分，仅当它被与它斜率相同的直线挡住，或被">
+<meta name="twitter:title" content="BZOJ 1010 玩具装箱">
+<meta name="twitter:description" content="题意
+有n件玩具，玩具长度为ci。连续的玩具可以装进同一容器里，玩具之间要留有1个单位的空间。容器制作费为(X-L)^2，其中X表示容器长度，L表示常量。求最小费用。
+数据范围
+$$n\leq50000\ \ \ ;\ \ \ L,C_i\leq10^7$$
+题解
+动规方程
+　　根据题目描述很容易列出动规方程：
+　　其中 $$s[i]=\sum_{k=1}^{i} c[k]；$$
+　　而X即为s">
 
   
   
@@ -123,7 +128,7 @@ $$n\leq50000$$题解
             </div>
             <div class="main-body-content">
               
-  <article id="post-3-17-1" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <article id="post-3-18-2" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
       <!--  -->
       
@@ -131,49 +136,48 @@ $$n\leq50000$$题解
           
   
     <h1 class="article-title" itemprop="name">
-      半平面交（三弹连发）
+      BZOJ 1010 玩具装箱
     </h1>
   
 
         </header>
       
       <p class="article-byline">
-        <a href="/2015/03/17/3-17-1/" class="article-date">
-  <time datetime="2015-03-17T10:40:18.000Z" itemprop="datePublished">3月 17 2015</time>
+        <a href="/2015/03/18/3-18-2/" class="article-date">
+  <time datetime="2015-03-18T08:46:11.000Z" itemprop="datePublished">3月 18 2015</time>
 </a>
       </p>
       <div class="article-entry" itemprop="articleBody">
-        <p><img src="http://i3.tietuku.com/c7c7fbdb1a76ea97.jpg" alt=""></p>
-<h2 id="半平面交基本概念">半平面交基本概念</h2>
+        <p><img src="http://i3.tietuku.com/95e04d08c21253ff.jpg" alt=""></p>
+<h2 id="题意">题意</h2>
+<p>有n件玩具，玩具长度为ci。连续的玩具可以装进同一容器里，玩具之间要留有1个单位的空间。容器制作费为(X-L)^2，其中X表示容器长度，L表示常量。求最小费用。</p>
+<h2 id="数据范围">数据范围</h2>
+<p>$$n\leq50000\ \ \ ;\ \ \ L,C_i\leq10^7$$</p>
+<h2 id="题解">题解</h2>
+<h3 id="动规方程">动规方程</h3>
+<p>　　根据题目描述很容易列出动规方程：<img src="http://i2.tietuku.com/809b516668e6615d.png" alt=""></p>
+<p>　　其中 $$s[i]=\sum_{k=1}^{i} c[k]；$$</p>
+<p>　　而X即为s[i]-s[j]+i-j-1；但这个X的表示实在太不好看。<br>　　我们发现i-j其实是可以跟s[i]-s[j]合到一起的，即令 c[i]=c[i]+1，则<img src="http://i2.tietuku.com/85be1914dbec89aa.png" alt=""><br>　　所以X=s[i]-s[j]-1。<br>　　再将那个-1与L合并，即L=L+1，然后我们就得到整理后的方程：<img src="http://i2.tietuku.com/701b3a9b7747ff4f.png" alt=""></p>
+<h3 id="斜率优化">斜率优化</h3>
+<h4 id="证明决策单调性">证明决策单调性</h4>
+<p>　　要证明当j&lt; k时，k决策比j要优，可以参考<a href="http://hzwer.com/2114.html" target="_blank" rel="external">HZWER</a>的证明，这里不再赘述。</p>
+<h4 id="斜率方程">斜率方程</h4>
+<p>　　已知k比j优，则<img src="http://i2.tietuku.com/d4cfafb3159fbf4f.png" alt=""><br>　　这里将s[i]-L当作一个整体来计算。<br>　　令<img src="http://i2.tietuku.com/f455bd6c4a18db7a.png" alt=""><br>　　转移时将S[i]移到等式右边判断。</p>
+<h4 id="斜率优化的出队入队">斜率优化的出队入队</h4>
 <ul>
-<li>半平面：由不等式ax+by+c&gt;=0确定。</li>
-<li>在一个有界区域里半平面或半平面的交是一个凸多边形区域。</li>
-<li>n个半平面的交是一个至多n条边的凸多边形。<h2 id="BZOJ_1007_水平可见直线">BZOJ 1007 水平可见直线</h2>
-<h3 id="题意">题意</h3>
-平面直角坐标系上，有n条直线，从y为正无穷处往下看。问能看看到哪些直线？<h3 id="数据范围">数据范围</h3>
-$$n\leq50000$$<h3 id="题解">题解</h3>
-当一条直线不是最后半平面交的组成部分，仅当它被与它斜率相同的直线挡住，或被两条斜率不同的直线挡住。如图：<br><img src="http://i2.tietuku.com/d6fdfd0aa5a2f18b.png" alt=""><br>斜率:l1&lt; l2&lt; l3；交点横坐标:x1&lt; x2。l2不是半平面交的组成部分，仅当x1&lt;=x2。<br>即直线与比它斜率小的直线的交点，比与比它大的直线的交点横坐标大或等于。<h3 id="代码">代码</h3>
+<li>出队<br>　　队列要维护一个前后相邻点的斜率单调递增，因为斜率越小越有，所以要保证队首最优。如果G(q[st+1],q[st])/S(q[st+1],q[st])&lt;=s[i]-L，就说明st+1比st优，st++。</li>
+<li>入队<br>　　如果G(q[en-1],q[en])/S(q[en-1],q[en])&gt;(q[en],q[i])/S(q[en],q[i])，就en—。理由如图：<img src="http://i2.tietuku.com/13e788e26489ea87.png" alt="当a比b斜率大时，去掉en来维护队列"><h2 id="代码">代码</h2>
 </li>
 </ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include&lt;cstdio&gt;</span></div><div class="line"><span class="comment">#include&lt;algorithm&gt;</span></div><div class="line">using namespace std;</div><div class="line">struct line</div><div class="line">{</div><div class="line">	<span class="keyword">int</span> a,b,num;</div><div class="line">	bool operator &lt; (const line c) const</div><div class="line">	{</div><div class="line">		<span class="keyword">if</span> (a==c.a) <span class="keyword">return</span> b&lt;c.b;</div><div class="line">		<span class="keyword">return</span> a&lt;c.a;</div><div class="line">	}</div><div class="line">}l[<span class="number">50010</span>];</div><div class="line"><span class="keyword">int</span> <span class="string">q[50010]</span>;</div><div class="line">bool v[<span class="number">50010</span>];</div><div class="line">double calc(<span class="keyword">int</span> <span class="keyword">x</span>,<span class="keyword">int</span> <span class="keyword">y</span>)</div><div class="line">{</div><div class="line">	<span class="keyword">return</span> double(l[<span class="keyword">y</span>].b-l[<span class="keyword">x</span>].b)/double(l[<span class="keyword">x</span>].a-l[<span class="keyword">y</span>].a);</div><div class="line">}</div><div class="line"><span class="keyword">int</span> main()</div><div class="line">{</div><div class="line">	<span class="keyword">int</span> n,num=<span class="number">0</span>;</div><div class="line">	scanf(<span class="string">"<span class="variable">%d</span>"</span>,&n);</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)	scanf(<span class="string">"<span class="variable">%d</span><span class="variable">%d</span>"</span>,&l[i].a,&l[i].b),l[i].num=i;</div><div class="line">	<span class="keyword">sort</span>(l+<span class="number">1</span>,l+n+<span class="number">1</span>);</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">	{</div><div class="line">		<span class="keyword">if</span>(i&lt;n&&l[i].a==l[i+<span class="number">1</span>].a) <span class="keyword">continue</span>;</div><div class="line">		<span class="keyword">while</span>(num&gt;<span class="number">1</span>&&calc(<span class="string">q[num]</span>,i)&lt;=calc(<span class="string">q[num-1]</span>,i)) v[l[<span class="string">q[num]</span>].num]=false,num--;</div><div class="line">		<span class="string">q[++num]</span>=i; v[l[i].num]=true;</div><div class="line">	}</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">	<span class="keyword">if</span> (v[i]) <span class="keyword">printf</span>(<span class="string">"<span class="variable">%d</span> "</span>,i);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include&lt;cstdio&gt;</span></div><div class="line">long long f[<span class="number">50001</span>],<span class="keyword">s</span>[<span class="number">50001</span>],l;</div><div class="line"><span class="keyword">int</span> <span class="string">q[50001]</span>;</div><div class="line">long long S<span class="string">qr(long long x)</span> {<span class="keyword">return</span> <span class="keyword">x</span>*<span class="keyword">x</span>;}</div><div class="line">long long g(<span class="keyword">int</span> <span class="keyword">x</span>,<span class="keyword">int</span> <span class="keyword">y</span>) {<span class="keyword">return</span> f[<span class="keyword">x</span>]-f[<span class="keyword">y</span>]+S<span class="string">qr(s[x])</span>-S<span class="string">qr(s[y])</span>;}</div><div class="line">long long S(<span class="keyword">int</span> <span class="keyword">x</span>,<span class="keyword">int</span> <span class="keyword">y</span>) {<span class="keyword">return</span> <span class="number">2</span>*(<span class="keyword">s</span>[<span class="keyword">x</span>]-<span class="keyword">s</span>[<span class="keyword">y</span>]);}</div><div class="line"><span class="keyword">int</span> main()</div><div class="line">{</div><div class="line">	<span class="keyword">int</span> n,st=<span class="number">0</span>,en=<span class="number">0</span>;</div><div class="line">	scanf(<span class="string">"<span class="variable">%d</span><span class="variable">%lld</span>"</span>,&n,&l);</div><div class="line">	l++;</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">	{</div><div class="line">		scanf(<span class="string">"<span class="variable">%lld</span>"</span>,&<span class="keyword">s</span>[i]);</div><div class="line">		<span class="keyword">s</span>[i]+=<span class="keyword">s</span>[i-<span class="number">1</span>]+<span class="number">1</span>;</div><div class="line">	}</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">	{</div><div class="line">		<span class="keyword">while</span>(st&lt;en&&g(<span class="string">q[st+1]</span>,<span class="string">q[st]</span>)&lt;=(<span class="keyword">s</span>[i]-l)*S(<span class="string">q[st+1]</span>,<span class="string">q[st]</span>))st++;</div><div class="line">		f[i]=f[<span class="string">q[st]</span>]+S<span class="string">qr(s[i]-s[q[st]]-l)</span>;</div><div class="line">		<span class="keyword">while</span> (st&lt;en&&g(<span class="string">q[en-1]</span>,<span class="string">q[en]</span>)*S(<span class="string">q[en]</span>,i)&gt;g(<span class="string">q[en]</span>,i)*S(<span class="string">q[en-1]</span>,<span class="string">q[en]</span>)) en--;</div><div class="line">		<span class="string">q[++en]</span>=i;</div><div class="line">	}</div><div class="line">	<span class="keyword">printf</span> (<span class="string">"<span class="variable">%lld</span>"</span>,f[n]);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
 
-<h2 id="BZOJ_3190_赛车">BZOJ 3190 赛车</h2>
-<h3 id="题意-1">题意</h3>
-<p>n辆赛车，赛车gi起始位于距离起跑线前进ki的位置。比赛开始后以vi速度行驶，只要它在某一时刻位于最领先位置就能得奖。求能得奖的赛车。</p>
-<h3 id="题解-1">题解</h3>
-<p>如果画出x-t图像就能发现，每辆赛车相当于一条直线，斜率为vi。求半平面交。（代码略）</p>
-<h2 id="BZOJ_1038_瞭望塔">BZOJ 1038 瞭望塔</h2>
-<h3 id="题意-2">题意</h3>
-<p>H村轮廓为(x1,y1),(x2,y2)…(xn,yn)连成的折线。满足x1&lt; x2&lt;…xn要求在某点建一个瞭望塔，满足在瞭望塔上能看到H村的任意位置。求瞭望塔的最小高度。</p>
-<h3 id="题解-2">题解</h3>
-<p>将折线延长求半平面交中的最低点。那么瞭望塔所建的位置一定是最低点或H村轮廓的最高点。（正好是上凸壳的最低点或下凸壳的最高点）（代码略）</p>
 
       </div>
       <footer class="article-footer">
-        <a data-url="http://fishclover.github.io/2015/03/17/3-17-1/" data-id="sozuxrgtiljt7qqp" class="article-share-link">分享到</a>
+        <a data-url="http://fishclover.github.io/2015/03/18/3-18-2/" data-id="rra8wlethh1bfmd5" class="article-share-link">分享到</a>
         
         
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/心的开始/">心的开始</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/计算几何/">计算几何</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DP/">DP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/心的开始/">心的开始</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/斜率优化/">斜率优化</a></li></ul>
 
       </footer>
     </div>
@@ -181,7 +185,7 @@ $$n\leq50000$$<h3 id="题解">题解</h3>
   
   <section id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="post-3-17-1" data-title="半平面交（三弹连发）" data-url="http://fishclover.github.io/2015/03/17/3-17-1/"></div>
+    <div class="ds-thread" data-thread-key="post-3-18-2" data-title="BZOJ 1010 玩具装箱" data-url="http://fishclover.github.io/2015/03/18/3-18-2/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -223,20 +227,10 @@ $$n\leq50000$$<h3 id="题解">题解</h3>
     
 <nav id="article-nav">
   
-    <a href="/2015/03/17/3-17-2/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">newer</strong>
-      <p class="article-nav-title">
-        
-          BZOJ 1002 轮状病毒
-        
-      </p>
-      <i class="icon" id="icon-chevron-right"></i>
-    </a>
   
-  
-    <a href="/2015/03/16/3-16-7/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2015/03/18/3-18-1/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">older</strong>
-      <p class="article-nav-title">进击的蒟蒻</p>
+      <p class="article-nav-title">BZOJ 1003 物流运输</p>
       <i class="icon" id="icon-chevron-left"></i>
     </a>
   
