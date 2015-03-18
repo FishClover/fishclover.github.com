@@ -226,7 +226,7 @@ body,
   background: #009f6b;
 }
 body {
-  background: #eaeaea;
+  background: #b6bb7d;
   font: 14px "Titillium Web", "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", sans-serif;
   -webkit-text-size-adjust: 100%;
 }
@@ -273,7 +273,7 @@ body {
 }
 .main-body {
   margin-top: -60px;
-  background-color: #fff;
+  background-color: #dddfc2;
 }
 .main-body-inner {
   padding-left: 340px;
@@ -529,7 +529,7 @@ body {
   display: none;
 }
 #sidebar {
-  float: left;
+  float: right;
   margin-left: -340px;
   width: 340px;
 }
@@ -1157,7 +1157,7 @@ a.article-title:hover {
   padding: 6px 15px;
   -webkit-border-radius: 15px;
   border-radius: 15px;
-  background: #eaeaea;
+  background: #b6bb7d;
   color: #aaa;
   text-shadow: 0 1px #fff;
   text-decoration: none;
@@ -1246,7 +1246,7 @@ a.article-title:hover {
   line-height: 36px;
 }
 .article-share-links {
-  background: #eaeaea;
+  background: #b6bb7d;
 }
 .article-share-links:before,
 .article-share-links:after {
@@ -1484,7 +1484,7 @@ a.article-title:hover {
   padding: 30px;
 }
 #footer #back-to-top {
-  background: #eaeaea;
+  background: #b6bb7d;
   color: #777;
   overflow: hidden;
   text-align: center;
@@ -1533,7 +1533,7 @@ a.article-title:hover {
   font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
 }
 .article-entry code {
-  background: #eaeaea;
+  background: #b6bb7d;
   text-shadow: 0 1px #fff;
   padding: 0 0.3em;
 }
